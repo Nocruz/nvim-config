@@ -13,3 +13,8 @@ vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' 
 
 -- Setup Neo-Tree macros
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem toggle left<CR>', { desc = 'Toggle Neo-Tree to the left' })
+
+-- Setup LSP keymaps
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
